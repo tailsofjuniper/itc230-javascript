@@ -1,35 +1,11 @@
-//require the mongoClient from mongodb module
-var MongoClient = require('mongodb').MongoClient;
+let items = [
+    "red", "orange", "yellow", "green", "blue"
+]
+exports.items = items
 
-//mongodb configs
-var connectionUrl = 'mongodb://localhost:27017/myproject',
-sampleCollection = 'chapters';
-
-//We need to insert these chapters into mongoDB
-var chapters = [{
-'Title': 'Snow Crash',
-'Author': 'Neal Stephenson'
-},{
-'Title': 'Snow Crash',
-'Author': 'Neal Stephenson'
-}];
-
-MongoClient.connect(connectionUrl, function(err, db) {
-
-console.log("Connected correctly to server");
-
-var dbo = db.db("mydb");
-
-// Get some collection
-var collection = dbo.collection(sampleCollection);
-
-collection.insert(chapters,function(error,result){
-//here result will contain an array of records inserted
-if(!error) {
-console.log("Success :"+result.ops.length+" chapters inserted!");
-} else {
-console.log("Some error was encountered!");
+exports.getItem = (index) => {
+    return items[index]
 }
-db.close();
-});
-});
+
+// console.log(items.length)
+// console.log(items[1])
