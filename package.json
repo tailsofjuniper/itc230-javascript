@@ -1,14 +1,23 @@
 {
-  "name": "testapp",
+  "name": "itc230-javascript",
   "version": "1.0.0",
-  "description": "",
+  "description": "sample",
   "main": "index.js",
+  "dependencies": {
+    
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailsofjuniper/itc230-javascript.git"
+  },
+  "author": "Joon Wheeler",
   "license": "ISC",
-  "dependencies": {
-    "mongodb": "^3.5.6"
-  }
+  "bugs": {
+    "url": "https://github.com/tailsofjuniper/itc230-javascript/issues"
+  },
+  "homepage": "https://github.com/tailsofjuniper/itc230-javascript#readme"
 }
