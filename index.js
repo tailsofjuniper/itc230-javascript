@@ -4,15 +4,15 @@ http.createServer((req,res) => {
   switch(path) {
     case '/':
       res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('Home page');
+      res.end("Home page");
       break;
     case '/about':
       res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('About page');
+      res.end("Hello, I'm a database developer.");
       break;
     default:
       res.writeHead(404, {'Content-Type': 'text/plain'});
-      res.end('Not found');
+      res.end("Not found");
       break;
     }
 }).listen(process.env.PORT || 3000);
