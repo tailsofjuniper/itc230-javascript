@@ -10,9 +10,10 @@ var bicycle = [
     ];
 var bicycles = bicycle.length;
 
-// const getAll = () => {
-//     return bicycle;
-// };
+const getAll = () => {
+    return "bicycle";
+};
+exports.getAll = getAll;
 
 // console.log(bicycles.length)
 // console.log(bicycles[1])
