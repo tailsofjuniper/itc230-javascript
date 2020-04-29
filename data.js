@@ -8,13 +8,17 @@ const bicycle = [
     { make : 'Look', type : 'RD', colour : 'red', wheel : '700c' },
     { make : 'Colnago', type : 'RD', colour : 'yellow', wheel : '700c' }
     ];
-var bicycles = bicycle.length;
-return bicycles
-const getAll = () => {
-    return "bicycle";
-};
-const _getAll = getAll;
-export { _getAll as getAll };
+const bicycles = bicycle.length;
+
+// const getAll = getAll();
+
+export function getAll() {
+    return () => {
+        return "bicycle";
+    };
+}
+// const _getAll = getAll;
+// export { _getAll as getAll };
 
 // console.log(bicycles.length)
 // console.log(bicycles[1])
