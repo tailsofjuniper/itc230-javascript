@@ -1,4 +1,3 @@
-// import getAll();
 const http = require("http"); 
 http.createServer((req,res) => {
   const path = req.url.toLowerCase();

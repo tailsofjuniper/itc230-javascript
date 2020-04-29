@@ -11,12 +11,14 @@ const bicycle = [
 const bicycles = bicycle.length;
 
 // const getAll = getAll();
-
 export function getAll() {
-    return () => {
-        return "bicycle";
+    return "bicycle";
     };
-}
+// export function getAll() {
+//     return () => {
+//         return "bicycle";
+//     };
+// }
 // const _getAll = getAll;
 // export { _getAll as getAll };
 
