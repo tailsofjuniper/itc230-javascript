@@ -1,13 +1,13 @@
 var mod = require("./data.js");
-//  module.imports.getAll;
+// imports.getAll();
 const http = require("http"); 
 http.createServer((req,res) => {
   const path = req.url.toLowerCase();
   switch(path) {
     case '/':
       res.writeHead(200, {'Content-Type': 'text/plain'});
-      // res.bicycle.length;
-      res.end("Home Page");
+      res.end(path);
+      // return bicycle.length;
       break;
     case '/about':
       res.writeHead(200, {'Content-Type': 'text/plain'});

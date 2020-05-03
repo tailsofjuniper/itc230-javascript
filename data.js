@@ -5,12 +5,12 @@ const bicycle = [
     { make : 'Look', type : 'RD', colour : 'red', wheel : '700c' },
     { make : 'Colnago', type : 'RD', colour : 'yellow', wheel : '700c' }
     ];
-module.exports.bicycle = [];
 
-// function getAll() {
-//     return bicycle
-//     };
-//     export function getAll;
+function getAll() {
+    return bicycle
+    };
+    exports.getAll;
+    exports.bicycle;
 // export function getAll() {
 //     return () => {
 //         return "bicycle";
@@ -21,3 +21,6 @@ module.exports.bicycle = [];
 
 // console.log(bicycles.length)
 // console.log(bicycles[1])
+// exports.getAll = () => {
+//     return bicycle;
+// }
