@@ -9,8 +9,7 @@ const bicycle = [
 function getAll() {
     return bicycle
     };
-    exports.getAll;
-    exports.bicycle;
+exports.getAll;
 // export function getAll() {
 //     return () => {
 //         return "bicycle";
