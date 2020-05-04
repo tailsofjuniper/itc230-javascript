@@ -1,16 +1,16 @@
-var mod = require("./data.js");
-var bicycle = require("./data.js").bicycle;
-// imports.getAll();
+const mod = require("./data.js");
+mod.getAll();
+
 const http = require("http"); 
 http.createServer((req,res) => {
-  // app.get('/', function (req, res) {
-  //   res.send('root')
-  // })
   const path = req.url.toLowerCase();
+  // app.get('/', (req, res) => {
+  //   res.render('home', {bicycle});
+  // }
   switch(path) {
     case '/':
       res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end(bicycle);
+      res.end(path);
       break;
     case '/about':
       res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -20,5 +20,5 @@ http.createServer((req,res) => {
       res.writeHead(404, {'Content-Type': 'text/plain'});
       res.end("Not found");
       break;
-    }
+  }
 }).listen(process.env.PORT || 3000);

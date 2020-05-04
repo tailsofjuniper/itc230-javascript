@@ -1,15 +1,15 @@
-const bicycle = [
-    { make : 'Trek', type : 'ATB', colour : 'red', wheel : '27.5in' },
-    { make : 'Specialized', type : 'ATB', colour : 'green', wheel : '29in' },
-    { make : 'Colnago', type : 'RD', colour : 'blue', wheel : '700c' },
-    { make : 'Look', type : 'RD', colour : 'red', wheel : '700c' },
-    { make : 'Colnago', type : 'RD', colour : 'yellow', wheel : '700c' }
+let bicycle = [
+    { make : 'Trek', name : '5000', type : 'ATB', colour : 'red', wheel : '27.5in' },
+    { make : 'Specialized', name : 'Allez', type : 'ATB', colour : 'green', wheel : '29in' },
+    { make : 'Colnago', name : 'Elite', type : 'RD', colour : 'blue', wheel : '700c' },
+    { make : 'Time', name : 'VSRX', type : 'RD', colour : 'red', wheel : '700c' },
+    { make : 'Colnago', name : 'EPS', type : 'RD', colour : 'yellow', wheel : '700c' }
     ];
 
-function getAll() {
-    return bicycle
-    };
-exports.getAll;
+exports.getAll = () => {
+    return bicycle;
+}
+
 // export function getAll() {
 //     return () => {
 //         return "bicycle";
