@@ -1,3 +1,9 @@
+// const app = express();
+// app,engine('handlebars', hbars({defaultLayout: false}));
+// app.set('view engine', 'handlebars');
+// app.set('port', process.env.PORT || 3000);
+// app.use(bodyParser.urlencoded({extended: true}));
+
 const all = require("./data.js");
 const bicycles = require("./data.js");
 bicycles.bicycle;
@@ -20,4 +26,22 @@ http.createServer((req,res) => {
       res.end("Not found");
       break;
   }
+  
+    // app.get('/', (req, res) => {
+    //   res.render('home', {bicycles.getAll()})
+    // } 
+    
+    // app.get('/detail', (req, res) => {
+    //   res.render('detail', {bicycles: req.query.item});
+    // }
+    // app.use((req, res) => {
+    //   res.type('text/plain');
+    //   res.status(404);
+    //   res.send('404 Error - Not Found');
+    // }
+
 }).listen(process.env.PORT || 3000);
+//     app.listen(app.get('port'), () => {
+//     console.log('Express startup");')
+// });
+// })
