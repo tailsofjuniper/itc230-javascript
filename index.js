@@ -1,5 +1,6 @@
-const mod = require("./data.js");
-mod.getAll();
+const getall = require("./data.js");
+getall.getAll();
+const bicycle = require("./data.js");
 
 const http = require("http"); 
 http.createServer((req,res) => {
@@ -7,8 +8,9 @@ http.createServer((req,res) => {
   switch(path) {
     case '/':
       res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end(path);
-      // want to return bicycle.length, but can't import the array. VSC says 'bicycle undefined'
+      res.end(bicycle.length);
+      return bicycle.length;
+      // still won't return array
       break;
     case '/about':
       res.writeHead(200, {'Content-Type': 'text/plain'});
