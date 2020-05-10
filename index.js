@@ -1,16 +1,15 @@
-const getall = require("./data.js");
-getall.getAll();
-const bicycle = require("./data.js");
-
+const all = require("./data.js");
+const bicycles = require("./data.js");
+bicycles.bicycle;
+all.getAll();
 const http = require("http"); 
 http.createServer((req,res) => {
   const path = req.url.toLowerCase();
   switch(path) {
     case '/':
+  // app.get('/', function (req, res) {
       res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end(bicycle.length);
-      return bicycle.length;
-      // still won't return array
+      res.end("Array length: " + bicycles.length);
       break;
     case '/about':
       res.writeHead(200, {'Content-Type': 'text/plain'});
