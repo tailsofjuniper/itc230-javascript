@@ -7,7 +7,6 @@ let bicycle = [
     ];
 
 exports.getAll = () => {
-    // imports bicycle;
     return bicycle;
 }
 exports.bicycle;
