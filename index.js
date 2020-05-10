@@ -4,13 +4,11 @@ mod.getAll();
 const http = require("http"); 
 http.createServer((req,res) => {
   const path = req.url.toLowerCase();
-  // app.get('/', (req, res) => {
-  //   res.render('home', {bicycle});
-  // }
   switch(path) {
     case '/':
       res.writeHead(200, {'Content-Type': 'text/plain'});
       res.end(path);
+      // want to return bicycle.length, but can't import the array. VSC says 'bicycle undefined'
       break;
     case '/about':
       res.writeHead(200, {'Content-Type': 'text/plain'});

@@ -9,17 +9,3 @@ let bicycle = [
 exports.getAll = () => {
     return bicycle;
 }
-
-// export function getAll() {
-//     return () => {
-//         return "bicycle";
-//     };
-// }
-// const _getAll = getAll;
-// export { _getAll as getAll };
-
-// console.log(bicycles.length)
-// console.log(bicycles[1])
-// exports.getAll = () => {
-//     return bicycle;
-// }
