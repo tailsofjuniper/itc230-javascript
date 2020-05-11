@@ -1,12 +1,20 @@
 const express = require('express');
+const exphb = require('express-handlebars');
+const handlebars = require('handlebars');
+const body = require('body-parser');
 const bicycle = require("./data.js");
 const getAll = require('./data.js');
 const app = express();
 const array = bicycle;
 const gall = getAll;
-const n = array.length;
+const length = array.length;
 
-
+app.engine('handlebars', exphb( {
+  extname: 'exphb',
+  defaultView: 'default',
+  layoutsDir: __dirname + '/views/pages/',
+  partialsDir: __dirname + '/views/partials'
+}));
 // app,set('handlebars', hbars({defaultLayout: false}));
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
