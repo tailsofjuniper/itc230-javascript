@@ -4,7 +4,7 @@ const exphb = require('express-handlebars');
 const handlebars = require('handlebars');
 const bodyParser = require('body-parser');
 const bicycle = require('./data.js');
-const getAll = require('./data.js');
+// const getAll = require('./data.js');
 const app = express();
 const array = bicycle;
 
@@ -14,15 +14,14 @@ app.engine('handlebars', exphb( {
   layoutsDir: __dirname + '/views/pages/',
   partialsDir: __dirname + '/views/partials'
 }));
-// app.set('handlebars', handlebars({defaultLayout: false}));
+app.set('handlebars', handlebars[{defaultLayout: false}]);
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
-// app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res){
   res.type('text/plain');
-  res.send([array.length]);
+  res.send('Home Page: There are ' + [array.length] + ' items in the bicycle array.');
 });
 app.get('/about', function(req, res){
   res.type('text/plain');
