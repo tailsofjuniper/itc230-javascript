@@ -6,7 +6,5 @@ let bicycle = [
     { make : 'Colnago', name : 'EPS', type : 'RD', colour : 'yellow', wheel : '700c' }
     ];
 
-module.exports = getAll = () => {
-    return bicycle;
-}
+module.exports = getAll => bicycle;
 module.exports = bicycle;

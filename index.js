@@ -3,7 +3,8 @@ const express = require('express');
 const exphb = require('express-handlebars');
 const handlebars = require('handlebars');
 const bodyParser = require('body-parser');
-const bicycle = require("./data.js");
+const bicycle = require('./data.js');
+const getAll = require('./data.js');
 const app = express();
 const array = bicycle;
 
