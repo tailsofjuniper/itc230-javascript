@@ -1,13 +1,11 @@
+'use strict'
 const express = require('express');
 const exphb = require('express-handlebars');
 const handlebars = require('handlebars');
-const body = require('body-parser');
+const bodyParser = require('body-parser');
 const bicycle = require("./data.js");
-const getAll = require('./data.js');
 const app = express();
 const array = bicycle;
-const gall = getAll;
-const length = array.length;
 
 app.engine('handlebars', exphb( {
   extname: 'exphb',
@@ -15,25 +13,26 @@ app.engine('handlebars', exphb( {
   layoutsDir: __dirname + '/views/pages/',
   partialsDir: __dirname + '/views/partials'
 }));
-// app,set('handlebars', hbars({defaultLayout: false}));
+// app.set('handlebars', handlebars({defaultLayout: false}));
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
-// app.use(bodyParser.urlencoded({extended: true}));
+// app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res){
   res.type('text/plain');
-  res.send(array);
+  res.send([array.length]);
 });
 app.get('/about', function(req, res){
   res.type('text/plain');
-  res.send('about');
+  res.send('Hi, I%m a database developer!');
 });
-app.get('/detail', function(req, res){
+app.get('/detail', (req, res) => {
   res.type('text/plain');
-  res.send('detail');
+  res.send('Watch this space.');
 });
 
-app.use(function(req, res){
+app.use( (req, res) => {
   res.type('text/plain');
   res.status(404);
   res.send('404 - not found')});
