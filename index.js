@@ -19,11 +19,11 @@ app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', function(req, res){
+app.get('/', (req, res) => {
   res.type('text/plain');
-  res.send('Home Page: There are ' + [array.length] + ' items in the bicycle array.');
+  res.send([array]);
 });
-app.get('/about', function(req, res){
+app.get('/about', (req, res) => {
   res.type('text/plain');
   res.send('Hi, I%m a database developer!');
 });
@@ -37,7 +37,7 @@ app.use( (req, res) => {
   res.status(404);
   res.send('404 - not found')});
 
-app.listen(app.get('port'), function(){
+app.listen(app.get('port'), () => {
   console.log('Express server started');
 });
 
