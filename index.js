@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const bicycle = require('./data.js');
 const getAll = require('./data.js');
 const app = express();
-// const array = bicycle;
 
 app.engine('handlebars', exphbs( {
   extname: 'exphbs',
@@ -23,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get('/', (req, res) => {
   res.type('text/plain');
   res.render('home');
-  res.send([bicycle]);
+  res.send([bicycle.length]);
 });
 app.get('/about', (req, res) => {
   res.type('text/plain');

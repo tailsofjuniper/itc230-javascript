@@ -9,4 +9,4 @@ let bicycle = [
 exports.getAll = () => {
     return bicycle;
 };
-exports.bicycle = bicycle;
+module.exports = bicycle;
