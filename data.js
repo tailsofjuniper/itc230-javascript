@@ -6,6 +6,16 @@ let bicycle = [
     { make : 'Colnago', name : 'EPS', type : 'RD', colour : 'yellow', wheel : '700c' }
     ];
 
+
+exports.getItem = () => {
+    return bicycle.values
+}
+exports.addItem = () => {
+
+}
+exports.deleteItem = () => {
+
+}
 exports.getAll = () => {
     return bicycle;
 };

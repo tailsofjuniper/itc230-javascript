@@ -30,6 +30,7 @@ app.get('/about', (req, res) => {
 });
 app.get('/detail?item[VALUE]', (req, res) => {
   res.type('text/plain');
+  res.render('detail');
   res.send('Watch this space.');
 });
 
